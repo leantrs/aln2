@@ -1,0 +1,17 @@
+
+header{
+    text-align: center;
+    padding: 10px;     
+    background-color: #fff;
+    margin: 10px;
+    border: 1px solid #db7093;
+    border-radius: 15px;
+      
+}
+.imgc {
+       
+       width: 100%;
+       max-width: 400px;
+       height: 100px;
+     
+}

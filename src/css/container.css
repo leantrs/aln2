@@ -1,0 +1,111 @@
+
+
+.containerb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px auto;
+    height: auto;
+    flex-flow: wrap;
+}
+.containerb .box-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    flex-flow: wrap;
+    background-color: #ffe4e1;
+    
+}
+.containerb .box-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    flex-flow: wrap;
+    background-color: #db7093; 
+    border-radius: 10px; 
+    
+}
+
+
+ .products-image{          
+    height: 550px ;
+    width: 300px auto;
+    padding: 5px;
+    border-radius: 10px;   
+    border: 0.5px solid gray;
+    margin: 10px;
+    text-align: center;
+ 
+}
+.products-image .vimagem{
+    
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+h3{
+    color:darkolivegreen;
+   
+    padding-left: 5px;
+}
+.bold{
+    color: blue;
+    margin-left: 5px;
+    
+} 
+.decoration{
+   
+    margin-left: 5px;
+    color: red;
+   
+}
+
+
+.btn-2{
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    width: 120px;
+    font-family: Helvetica;
+    border-left: 10px solid #000; 
+}
+
+.btn-2:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.img{
+    max-width:300px;
+    max-height:300px;
+    width: auto;
+    height: 300px auto;
+   
+}
+p{
+    
+    padding: 7px;
+    font-family: helvetica;
+}
+h3{
+    margin-top: 5px;
+    color: #db7093; 
+}
+.pag{
+    margin: 3px;
+    padding: 5px;
+    background-color: #db7093; 
+    color: #fff;
+    border: 1px solid #fff;
+}
+.pag:hover{
+    background-color: #fff;
+    color: #000;
+}
+
