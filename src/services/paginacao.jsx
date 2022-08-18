@@ -15,6 +15,8 @@ async function listaProdutosPag(page,limite,forn) {
       });
   
       let json = await response.json();
+
+      console.log(json)
   
       return json;
     } catch (error) {
