@@ -13,6 +13,8 @@ async function listaProdutos(tam) {
       });
   
       let json = await response.json();
+
+      console.log(json)
   
       return json;
     } catch (error) {
