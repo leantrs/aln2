@@ -7,8 +7,7 @@ const Header = () => {
 
     return(
          <header >
-             <img className="imgc" src="http://localhost/alnadm/img/logo.png" alt="" />
-
+             <img className="imgc" src="https://alineleandro.ml/img/logo.png" alt="" />               
          </header>
 
        
