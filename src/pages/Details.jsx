@@ -134,6 +134,8 @@ async function buscarR(jul) {
         ref: referencia,
       };
        
+      console.log(itemx)
+      
       const armaz = JSON.stringify(itemx);
       localStorage.setItem(id, armaz);
 

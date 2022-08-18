@@ -5,7 +5,7 @@
   justify-content: space-between;
   /* align-items: center; */
   padding-top: 10px;
-  background-color: #db7093;
+  background-color: #1C1C1C;
 }
 
 .Navbar > .nav-logo {
@@ -14,7 +14,7 @@
   padding: 5px;
   border-radius: 50px;
   font-family: Helvetica;
-  background-color: #db7093;
+  background-color: #1C1C1C;
   color: #fff;
   font-size: 21px;
   margin: 15px;
@@ -80,7 +80,7 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    background: #db7093;
+    background: #1C1C1C;
     opacity: 0.9;
     left: 0;
     width: 100%;

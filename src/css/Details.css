@@ -83,8 +83,8 @@
 }
 h1{
     margin: 10px;
-    border: 0.5px solid  #db7093; 
-    color: #db7093;
+    border: 0.5px solid  #1C1C1C; 
+    color: #1C1C1C;
     border-radius: 15px;
     padding: 5px;
 }
@@ -106,7 +106,7 @@ p{
     border-radius: 10px;
     color: #000;
     background-color: #fff;
-    border-left: 10px solid  #db7093; 
+    border-left: 10px solid  #1C1C1C; 
 }
 .btn:hover{
     background-color: #fff;

@@ -14,7 +14,7 @@
     justify-content: center;
     
     flex-flow: wrap;
-    background-color: #ffe4e1;
+    background-color: #fff;
     
 }
 .containerb .box-2{
@@ -23,7 +23,7 @@
     justify-content: center;
     width: 50%;
     flex-flow: wrap;
-    background-color: #db7093; 
+    background-color: #1C1C1C; 
     border-radius: 10px; 
     
 }
@@ -95,12 +95,12 @@ p{
 }
 h3{
     margin-top: 5px;
-    color: #db7093; 
+    color: #1C1C1C; 
 }
 .pag{
     margin: 3px;
     padding: 5px;
-    background-color: #db7093; 
+    background-color: #1C1C1C; 
     color: #fff;
     border: 1px solid #fff;
 }

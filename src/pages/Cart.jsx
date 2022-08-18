@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from '../components/NavBar'
 import Header from '../components/header'
 import {BiTrash} from 'react-icons/bi'
+
 import cartkrn from "../actions/cartAction";
 import { useDispatch } from "react-redux";
 
@@ -148,11 +149,18 @@ const Cart = () => {
     const rec = keys.filter(checkar);
     setItt(rec);
     function checkar(k) {
-      return k !== "fornecedor";
+      return k !== "pass" && k !== "fornecedor"  ;
     }
+
+
+    console.log(rec) 
+
+
     const recx = rec.map((item) => {
       return JSON.parse(localStorage.getItem(item));
     });
+
+
 
     let valor = 0;
     let quantidade = 0;
@@ -165,12 +173,17 @@ const Cart = () => {
     setSoma(valor.toFixed(2));
     setQuantidade(quantidade);
 
+  
+    console.log(recx)
+
     if (recx !== null) {
       dispatch(cartkrn(recx));
       console.log("entrou");
       setTeste(Array.from(recx));
     }
     setEstado2(true);
+
+  
   }
 
   async function pegarEmail() {
@@ -194,7 +207,7 @@ const Cart = () => {
       if (estado === true) {
         const email = await pegarEmail();
 
-        let response = await fetch("https://trs2500.ml/aln/Controller.php", {
+        let response = await fetch("https://alineleandro.ml/Controller.php", {
           method: "POST",
           headers: {
             Accept: "application/json",
