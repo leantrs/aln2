@@ -1,6 +1,6 @@
 async function buscarProdutoImg(rec) {
   try {
-    let response = await fetch("http://localhost/aln/Controller.php", {
+    let response = await fetch("https://alineleandro.ml/Controller.php", {
       method: "POST",
       headers: {
         Accept: "application/json",
