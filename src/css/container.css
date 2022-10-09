@@ -23,7 +23,7 @@
     justify-content: center;
     width: 50%;
     flex-flow: wrap;
-    background-color: #1C1C1C; 
+    background-color: #ffe4e1; 
     border-radius: 10px; 
     
 }
@@ -34,7 +34,7 @@
     width: 300px auto;
     padding: 5px;
     border-radius: 10px;   
-    border: 0.5px solid gray;
+    border: 0.5px solid pink;
     margin: 10px;
     text-align: center;
  
