@@ -2,14 +2,15 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import React, { useState, useEffect } from "react";
-import '../css/Cart.css'
+import '../css/Cart.css';
 import { useNavigate } from "react-router-dom";
-import Navbar from '../components/NavBar'
-import Header from '../components/header'
-import {BiTrash} from 'react-icons/bi'
-
+import Navbar from '../components/NavBar';
+import Header from '../components/header';
+import {BiTrash} from 'react-icons/bi';
 import cartkrn from "../actions/cartAction";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -111,7 +112,7 @@ const SummaryItemText = styled.span``;
 
 const SummaryItemPrice = styled.span``;
 
-
+toast.configure();
 const Cart = () => {
   const [teste, setTeste] = useState(null);
   
@@ -204,8 +205,7 @@ const Cart = () => {
 
   async function handleSignIn1() {
     try {
-      /*
-      if (estado === true) {
+            if (estado === true) {
         const email = await pegarEmail();
 
         let response = await fetch("https://alineleandro.ml/Controller.php", {
@@ -233,11 +233,12 @@ const Cart = () => {
           return item;
         });
       } else {
-       
+        toast.warn("Necessario efetuar login / Nao usuario Registre-se");
+        navigate("/Login");
         navigate("/Login");
      
       }
-      */
+      
       let response = await fetch('https://graph.facebook.com/v15.0/17841402265662259?fields=business_discovery.username(cnovohamburgo){followers_count,media_count,media}&access_token=EAAGpPS1V6ZB0BAD4OiKbZAC9FDR3Qq9rAZC8AIuji4vWltLulyDiQocrQW18ftCsEnmI1dLDkGUB3F2UqkRFDJ47ZA4vjMil2ZCZCcC5gzKE4q8N0ePbYZArJhoZA0CiqEszGZBWw7K4PzXPht24PZAEv9svvZBUZBbhZC8BN60i8gqpjOkisVUdZAbBgZAYwsPflBystjS1PLhtk6MRLhWQggzeNCl')
       .then(response => response.json())
       .then();
