@@ -21,7 +21,7 @@ async function listaProdutosPag(page,limite,forn) {
   
       let json = await response.json();
 
-       
+       console.log(json);
       return json;
     } catch (error) {
       console.log("banco de dados desconectado",page,limite);

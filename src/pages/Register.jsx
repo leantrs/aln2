@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "../components/NavBar";
 import InputCEP from "../components/InputCEP";
 import InputNormal from "../components/InputNormal";
@@ -11,6 +11,8 @@ import InputNasc from "../components/InputNasc";
 import InputCPF from "../components/InputCPF";
 import InputCELULAR from "../components/InputCELULAR";
 import "../css/Register.css";
+import authServices from "../services/authServices";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
   width: 100%;
@@ -47,11 +49,13 @@ const Form = styled.form`
   flex-wrap: wrap;
 `;
 
+// eslint-disable-next-line
 const Input = styled.input`
   flex: 0;
   min-width: 80%;
   margin: 20px 5px 10px 0px;
   padding: 10px;
+  color: black;
 `;
 
 const Agreement = styled.span`
@@ -70,7 +74,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-// toast.configure();
+
 const Register = () => {
   const [nome, setNome] = useState("");
   const [endereco, setEndereco] = useState("");
@@ -85,9 +89,17 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [celular, setCelular] = useState("");
   const [nascimento, setNascimento] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // eslint-disable-next-line
+  const dispatch = useDispatch();
+
+  const fail = (rec) =>  toast.error(rec);
+  const success = () =>toast.success("Cadastro realizado c/ sucesso");
+
 
   async function handleSignIn() {
+
+    //console.log('aqui')
+
     try {
       let response = await fetch("https://alineleandro.ml/Controller.php", {
         method: "POST",
@@ -116,13 +128,48 @@ const Register = () => {
       let json = await response.json();
 
       if (json === true) {
-        // toast.success("Cadastro realizado c/ sucesso");
-
-        navigate("/Login");
+       // console.log("Cadastro realizado c/ sucesso"); 
+        success();
+        acessar(email,senha);  
+        //navigate("/");
       } else {
-        // toast.error(json);
+        fail(json);
+      //  console.log(json);
+         //toast.error(json);
       }
-    } catch (error) {}
+    } catch (error) {
+
+      
+    }
+
+    async function acessar(user,password) {
+
+   
+
+      try {
+         const rec = await authServices(user, password); // BUSCA NO BANCO DE DADOS INF LOGIN E SENHA
+ 
+        //INICIO IF
+       if (rec === false) {
+         // SE NAO ENCONTRAR DESTROI A INFORMAÇÃO NO LOCALSTORAGE
+ 
+         await localStorage.removeItem("pass");
+       } else {
+         // SE EXISTIR CRIA UM OBJETO DE USUARIO
+         // eslint-disable-next-line
+         const objUsuario = {
+           user: rec,
+         };
+ 
+         localStorage.setItem("pass", rec);
+ 
+ 
+ 
+         navigate("/");
+        }
+        //FIM BLOCO IF
+       } catch (error) {}
+    }
   }
 
   return (
@@ -206,10 +253,11 @@ const Register = () => {
           <Agreement></Agreement>
           <Button
             onClick={handleSignIn}
-            // onClick={notify}
+            
           >
             CRIAR
           </Button>
+          <ToastContainer />
           <br></br>
         </Wrapper>
       </Container>

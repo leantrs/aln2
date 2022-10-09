@@ -18,7 +18,7 @@ async function listaProdutos(tam) {
   
       return json;
     } catch (error) {
-      console.log("banco de dados desconectado");
+     // console.log("banco de dados desconectado");
     }
   }
   

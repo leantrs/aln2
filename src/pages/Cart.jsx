@@ -8,9 +8,12 @@ import Navbar from '../components/NavBar';
 import Header from '../components/header';
 import {BiTrash} from 'react-icons/bi';
 import cartkrn from "../actions/cartAction";
-import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux"; // eslint-disable-next-line
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 
 
@@ -112,10 +115,12 @@ const SummaryItemText = styled.span``;
 
 const SummaryItemPrice = styled.span``;
 
-toast.configure();
+
 const Cart = () => {
-  const [teste, setTeste] = useState(null);
+
   
+
+  const [teste, setTeste] = useState(null);
   const [soma, setSoma] = useState(0);
   const [estado, setEstado] = useState(false);
   const [estado2, setEstado2] = useState(false);
@@ -126,6 +131,9 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const userx = JSON.stringify(localStorage.getItem("pass"));
+ 
+  const notify = () => toast.warn("Direcionado ao PagSeguro");
+  
 
   useEffect(
     () => {
@@ -154,7 +162,7 @@ const Cart = () => {
     }
 
 
-    console.log(rec) 
+   // console.log(rec) 
 
 
     const recx = rec.map((item) => {
@@ -175,7 +183,7 @@ const Cart = () => {
     setQuantidade(quantidade);
 
   
-    console.log(recx)
+  //  console.log(recx)
 
     if (recx !== null) {
       dispatch(cartkrn(recx));
@@ -233,19 +241,19 @@ const Cart = () => {
           return item;
         });
       } else {
-        toast.warn("Necessario efetuar login / Nao usuario Registre-se");
-        navigate("/Login");
+        //toast.warn("Necessario efetuar login / Nao usuario Registre-se");
+     //   console.log("Necessario efetuar login / Nao usuario Registre-se")
         navigate("/Login");
      
       }
       
-      let response = await fetch('https://graph.facebook.com/v15.0/17841402265662259?fields=business_discovery.username(cnovohamburgo){followers_count,media_count,media}&access_token=EAAGpPS1V6ZB0BAD4OiKbZAC9FDR3Qq9rAZC8AIuji4vWltLulyDiQocrQW18ftCsEnmI1dLDkGUB3F2UqkRFDJ47ZA4vjMil2ZCZCcC5gzKE4q8N0ePbYZArJhoZA0CiqEszGZBWw7K4PzXPht24PZAEv9svvZBUZBbhZC8BN60i8gqpjOkisVUdZAbBgZAYwsPflBystjS1PLhtk6MRLhWQggzeNCl')
-      .then(response => response.json())
-      .then();
+      // let response = await fetch('https://graph.facebook.com/v15.0/17841402265662259?fields=business_discovery.username(cnovohamburgo){followers_count,media_count,media}&access_token=EAAGpPS1V6ZB0BAD4OiKbZAC9FDR3Qq9rAZC8AIuji4vWltLulyDiQocrQW18ftCsEnmI1dLDkGUB3F2UqkRFDJ47ZA4vjMil2ZCZCcC5gzKE4q8N0ePbYZArJhoZA0CiqEszGZBWw7K4PzXPht24PZAEv9svvZBUZBbhZC8BN60i8gqpjOkisVUdZAbBgZAYwsPflBystjS1PLhtk6MRLhWQggzeNCl')
+      // .then(response => response.json())
+      // .then();
 
-      console.log(response.business_discovery.followers_count)
+      // console.log(response.business_discovery.followers_count)
     } catch (error) {
-      console.log("algo errado aqui")
+   //   console.log("algo errado aqui")
     }
     
   }
@@ -255,7 +263,7 @@ const Cart = () => {
       <>
       <Navbar/>
       <Header/>
-          
+      <ToastContainer /> 
     <div className="containerc">
         <div className="boxc-1">
         <Container>
@@ -311,9 +319,11 @@ const Cart = () => {
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
           </SummaryItem>
          <button className="btnd2" onClick={handleSignIn1}> FINALIZAR COMPRA</button> 
-        
+         
+         <ToastContainer />
         </div>
     </div>
+    
     </>
   )
 }

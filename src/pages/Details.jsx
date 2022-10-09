@@ -134,14 +134,14 @@ async function buscarR(jul) {
         ref: referencia,
       };
        
-      console.log(itemx)
+     // console.log(itemx)
       
       const armaz = JSON.stringify(itemx);
       localStorage.setItem(id, armaz);
 
       navigate("/Cart");
     } catch (error) {
-      console.log(titulo);
+    //  console.log(titulo);
     }
   // }
 }

@@ -39,11 +39,11 @@ const Container = () => {
             setFornecedor(tarefa.params);   
 
             if(todos.id !== 1){
-              console.log('b')
+            console.log('b')
 
               buscarP(0,todos[0].fornecedor)
             }else{
-              console.log('c')
+             console.log('c')
               buscarP(0,tarefa.params);      
             }            
          
@@ -70,6 +70,7 @@ const Container = () => {
            const teste = await Paginacao(tre,10,forn);
            setLista(teste);
            await dispatch(signIn(teste));
+         
      }
 
     
@@ -81,6 +82,8 @@ const Container = () => {
 
   function teste(params) {
        
+
+    console.log('222  '+params);
     buscarP(params,fornecedor);  
    
   }

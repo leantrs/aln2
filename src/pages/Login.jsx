@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import Navbar from "../components/NavBar";
 import '../css/Login.css';
 import Header from '../components/header';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -14,6 +16,9 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
    const dispatch = useDispatch();
+
+
+   const fail = (rec) =>  toast.error("Email ou Senha nao conferem");
 
    async function handleSignIn() {
 
@@ -25,7 +30,7 @@ const Login = () => {
        //INICIO IF
       if (rec === false) {
         // SE NAO ENCONTRAR DESTROI A INFORMAÇÃO NO LOCALSTORAGE
-
+         fail('Email ou Senha nao conferem');
         await localStorage.removeItem("pass");
       } else {
         // SE EXISTIR CRIA UM OBJETO DE USUARIO
@@ -78,6 +83,7 @@ const Login = () => {
               />
             
             <button className="btn" onClick={handleSignIn}>LOGIN</button>
+            <ToastContainer />
             <button className="btny" onClick={handleSignIn2}>
               Nao tem uma conta? Registre-se
             </button>

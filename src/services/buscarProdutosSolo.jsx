@@ -16,7 +16,7 @@ async function buscarProduto(rec) {
   
       return json;
     } catch (error) {
-      console.log("banco de dados desconectado");
+    //  console.log("banco de dados desconectado");
     }
   }
   
