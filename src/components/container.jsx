@@ -70,7 +70,6 @@ const Container = () => {
            const teste = await Paginacao(tre,10,forn);
            setLista(teste);
            await dispatch(signIn(teste));
-         
      }
 
     
