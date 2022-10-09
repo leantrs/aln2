@@ -1,4 +1,9 @@
 async function listaProdutosPag(page,limite,forn) {
+ 
+    console.log(page);
+    console.log(limite);
+    console.log(forn);
+
     try {
       let response = await fetch("https://alineleandro.ml/Controller.php", {
         method: "POST",
