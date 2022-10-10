@@ -64,6 +64,16 @@ h3{
    
 }
 
+.mnu{
+    padding: 5px;
+    margin-right: 5px;
+    color: #000;
+    margin-bottom: 30px;
+}
+.mnu:hover{
+    background-color: pink;
+    color: #000;
+}
 
 .btn-2{
     padding: 5px;

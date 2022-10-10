@@ -1,9 +1,5 @@
 async function listaProdutosPag(page,limite,forn) {
- 
-    console.log(page);
-    console.log(limite);
-    console.log(forn);
-
+    
     try {
       let response = await fetch("https://alineleandro.ml/Controller.php", {
         method: "POST",
@@ -21,10 +17,10 @@ async function listaProdutosPag(page,limite,forn) {
   
       let json = await response.json();
 
-       console.log(json);
+ 
       return json;
     } catch (error) {
-      console.log("banco de dados desconectado",page,limite);
+    //  console.log("banco de dados desconectado",page,limite);
     }
   }
   

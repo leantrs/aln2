@@ -7,7 +7,6 @@ import signIn from "../actions/listaActions";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-
 const Container = () => {
     const [lista, setLista] = useState(null);
     const navigate = useNavigate();
@@ -25,7 +24,7 @@ const Container = () => {
           if(krn == null){
              buscarP(0,"");      
              buscarQ(""); 
-             console.log('a')
+          //   console.log('a')
              
             
           }else{
@@ -39,11 +38,11 @@ const Container = () => {
             setFornecedor(tarefa.params);   
 
             if(todos.id !== 1){
-            console.log('b')
+            //  console.log('b')
 
               buscarP(0,todos[0].fornecedor)
             }else{
-             console.log('c')
+              console.log('c')
               buscarP(0,tarefa.params);      
             }            
          
@@ -81,8 +80,6 @@ const Container = () => {
 
   function teste(params) {
        
-
-    console.log('222  '+params);
     buscarP(params,fornecedor);  
    
   }
@@ -90,13 +87,18 @@ const Container = () => {
     return(
         <div className="containerb">
              <div className="box-1">
-           
+       
                   
              {lista &&
           lista.map((item) =>  ( 
                   
                   <div className="products-image">
-
+ <button className='mnu' onClick={() => buscarP(1,"")}>Home</button>
+        <button className='mnu' onClick={() => buscarP(1,"Scarpin")}> Scarpin</button> 
+        {/* <button className='mnu' onClick={() => buscarP(1,"Botas")}>Botas</button> */}
+        <button className='mnu' onClick={() => buscarP(1,"Tenis")}> Tenis</button> 
+        <button className='mnu' onClick={() => buscarP(1,"Sandalia")}>Sandalia</button>
+        <button className='mnu' onClick={() => buscarP(1,"Bolsas")}>Bolsas</button>
                           <div className="vimagem">
                                     <img src={item.img} alt="" className="img" />
 					                <h3>{item.title}</h3>

@@ -4,16 +4,16 @@ import {BsCartCheck} from 'react-icons/bs'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import Paginacao from '../services/paginacao';
-import signIn from "../actions/listaActions";
+// import Paginacao from '../services/paginacao';
+// import signIn from "../actions/listaActions";
 import signUser from "../actions/accountActions";
 
 
 
 
 const Navbar = () => {
-  const [lista, setLista] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [lista, setLista] = useState(null);
+  // const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const todos = useSelector((state) => state.cart.listaCarrinho);
   const dispatch = useDispatch();
@@ -34,6 +34,8 @@ const Navbar = () => {
 
 
   async function rsn() {
+    
+    
     const userx = JSON.stringify(localStorage.getItem("pass"));
     setUser(userx);
 
@@ -70,17 +72,17 @@ const Navbar = () => {
   // console.log(todos);
 
 
-  function teste(params) {
+  // function teste(params) {
 
-    //criar um armazenamento
-    const itemx = {
-       params,
-    };
+  //   //criar um armazenamento
+  //   const itemx = {
+  //      params,
+  //   };
         
-    const armaz = JSON.stringify(itemx);
-    localStorage.setItem('fornecedor', armaz);
+  //   const armaz = JSON.stringify(itemx);
+  //   localStorage.setItem('fornecedor', armaz);
 
-  }
+  // }
 
   
   async function handleSignIn2() {
@@ -88,17 +90,26 @@ const Navbar = () => {
     navigate("/Cart");
   }
 
+  async function handleSignIn3() {
+
+    console.log('teste')
+    // eslint-disable-next-line
+    navigate("/");
+  }
+
   
-  async function buscarP(tre,forn) {  
+//   async function buscarP(tre,forn) {  
 
            
-    const teste = await Paginacao(1,10,forn);
-    setLista(teste)
-    await dispatch(signIn(lista));
+//     const teste = await Paginacao(1,10,forn);
+//     setLista(teste)
+//     await dispatch(signIn(lista));
     
-    setIsOpen(false)
+//     setIsOpen(false)
+
+//     console.log(teste)
     
-}
+// }
   return (
     
     <div className="Navbar">
@@ -107,26 +118,26 @@ const Navbar = () => {
         <BsCartCheck className="cartcheck"  onClick={handleSignIn2}/>
       
         </p>
+        <div>
+          <button className="bnc" onClick={handleSignIn3}> HOME </button>
+        </div>
 
-      <div className={`nav-items ${isOpen && "open"}`}>
-        <a href="/" onClick={() => teste("")}>Home</a>
-        
-        {/* <a href="/" onClick={() => teste("Scarpin")}> Scarpin</a> */}
-        <a  onClick={() => buscarP(1,"Scarpin")}> Scarpin</a> 
-        
-        <a href="/" onClick={() => teste("Botas")}>Botas</a>
-        {/* <a href="/" onClick={() => teste("Tenis")} >Tenis</a> */}
-        <a  onClick={() => buscarP(1,"Tenis")}> Tenis</a> 
-        <a href="/" onClick={() => teste("Sandalia")}>Sandalia</a>
-        <a href="/" onClick={() => teste("Bolsas")}>Bolsas</a>
+      {/* <div className={`nav-items ${isOpen && "open"}`}>
+        <button  onClick={() => buscarP(1,"")}>Home</button>
+        <button  onClick={() => buscarP(1,"Scarpin")}> Scarpin</button> 
+        <button  onClick={() => buscarP(1,"Botas")}>Botas</button>
+        <button  onClick={() => buscarP(1,"Tenis")}> Tenis</button> 
+        <button  onClick={() => buscarP(1,"Sandalia")}>Sandalia</button>
+        <button  onClick={() => buscarP(1,"Bolsas")}>Bolsas</button>
 
-      </div>
-      <div
+      </div> */}
+      {/* <div
         className={`nav-toggle ${isOpen && "open"}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="bar"></div>
       </div>
+   */}
     </div>
   );
 };
