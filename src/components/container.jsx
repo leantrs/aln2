@@ -106,7 +106,7 @@ const Container = () => {
                     <p>ref: {item.ref}</p>
 								    <p>3x de<span className="decoration">{(item.valor / 3).toFixed(2)}</span></p>
 								    <p>total R$<span className="bold">{item.valor}</span></p>
-								    <button className="btn-2" onClick={(event) => handleSignIn(item.id)}>COMPRAR</button>  
+								    <button className="btn-2" onClick={(event) => handleSignIn(item.id)}>COMPRAR | Detalhes</button>  
                                                    
 								 </div>                   
                    </div>
