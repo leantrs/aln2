@@ -135,7 +135,7 @@ const Cart = () => {
 
   useEffect(
     () => {
-      setCount(0);
+  
       krn();
     }, // eslint-disable-next-line
     []
