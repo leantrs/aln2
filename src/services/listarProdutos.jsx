@@ -23,7 +23,7 @@ async function listaProdutos() {
   
       return xrec;
     } catch (error) {
-     // console.log("banco de dados desconecctado");
+     // console.log("banco de dados desconectado");
     }
   }
   

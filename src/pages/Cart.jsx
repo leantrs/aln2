@@ -3,12 +3,8 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import React, { useState, useEffect } from "react";
 import '../css/Cart.css';
-import { useNavigate } from "react-router-dom";
-import Navbar from '../components/NavBar';
 import Header from '../components/header';
 import {BiTrash} from 'react-icons/bi';
-import cartkrn, { CART_SUCCESS } from "../actions/cartAction";
-import { useDispatch } from "react-redux"; // eslint-disable-next-line
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import listaitens from '../services/listarProdutos';
@@ -48,11 +44,6 @@ const ProductDetail = styled.div`
   display: flex;
 `;
 
-const Image = styled.img`
-  width: 200px;
-  border-radius: 10px;
-  padding: 10px;
-`;
 
 const Details = styled.div`
   padding: 20px;
@@ -65,14 +56,9 @@ const ProductName = styled.span``;
 
 const ProductId = styled.span``;
 
-const ProductColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-`;
 
-const ProductSize = styled.span``;
+
+
 
 const PriceDetail = styled.div`
   flex: 1;
@@ -133,25 +119,23 @@ const Cart = () => {
 
   const [teste, setTeste] = useState(null);
   const [soma, setSoma] = useState(0);
-  const [estado, setEstado] = useState(false);
+  
   const [estado2, setEstado2] = useState(false);
   const [quantidade, setQuantidade] = useState(0);
   const [count, setCount] = useState(1);
-  const[id,setId] = useState(0);
+  
 
-  const navigate = useNavigate();
-  const [rec, setRec] = useState("Default");
+  
   const [itt, setItt] = useState(null);
-  const dispatch = useDispatch();
+ 
 
   const userx = JSON.stringify(localStorage.getItem("pass"));
- 
-  const notify = () => toast.warn("Direcionado ao PagSeguro");
+
   
 
   useEffect(
     () => {
-     
+      setCount(0);
       krn();
     }, // eslint-disable-next-line
     []
@@ -161,7 +145,7 @@ const Cart = () => {
     () => {
       if (userx === "20" || userx === "null") {
       } else {
-        setEstado(true);
+        
         
       }
     }, // eslint-disable-next-line
@@ -219,7 +203,7 @@ const Cart = () => {
   //  console.log(recx)
 
     if (recx !== null) {
-      dispatch(cartkrn(recx));
+  
       console.log("entrou");
       setTeste(Array.from(recx));
     }
@@ -243,7 +227,7 @@ const Cart = () => {
     });
 
 
-   const teste =  recx.map((item) => {
+   recx.map((item) => {
       const recy = inserirdados(item.estab,item.itens,item.valor,item.quant,item.obs);
       return recy;   
       

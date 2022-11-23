@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authServices from "../services/authServices";
-import { useDispatch } from "react-redux";
-import Navbar from "../components/NavBar";
 import '../css/Login.css';
 import Header from '../components/header';
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,7 +13,7 @@ const Login = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-   const dispatch = useDispatch();
+   
 
 
    const fail = (rec) =>  toast.error("Email ou Senha nao conferem");
@@ -32,10 +30,7 @@ const Login = () => {
         await localStorage.removeItem("pass");
       } else {
         // SE EXISTIR CRIA UM OBJETO DE USUARIO
-        const objUsuario = {
-          user: rec,
-        };
-
+       
         localStorage.setItem("pass", rec);
 
 
