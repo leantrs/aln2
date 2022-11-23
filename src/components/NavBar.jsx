@@ -92,7 +92,7 @@ const Navbar = () => {
 
   async function handleSignIn3() {
 
-    console.log('teste')
+   // console.log('teste')
     // eslint-disable-next-line
     navigate("/");
   }

@@ -1,5 +1,5 @@
 async function authServices(user, password) {
-  let response = await fetch("https://alineleandro.ml/Controller.php", {
+  let response = await fetch("https://alineleandro.com.br/Controller.php", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -13,6 +13,8 @@ async function authServices(user, password) {
   });
 
   let json = await response.json();
+
+  console.log(json);
 
   return json;
 }

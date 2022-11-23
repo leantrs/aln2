@@ -18,11 +18,12 @@ const App = () => {
     <Provider store={store}>
     <BrowserRouter>
       <Routes>
-         <Route path="/" element={<Home />} />
-         <Route path="/Details" element={<Details />} />     
+         <Route path="/" element={<Login />} />
+         <Route path="/Cart" element={<Cart />} />
+         {/* <Route path="/Details" element={<Details />} />     
          <Route path="/Cart" element={<Cart />} />   
          <Route path="/Login" element={<Login/>} />   
-         <Route path="/Register" element={<Register/>} />   
+         <Route path="/Register" element={<Register/>} />    */}
       </Routes>
     </BrowserRouter>
     </Provider>

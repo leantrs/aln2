@@ -21,9 +21,7 @@ const Login = () => {
    const fail = (rec) =>  toast.error("Email ou Senha nao conferem");
 
    async function handleSignIn() {
-
    
-
      try {
         const rec = await authServices(user, password); // BUSCA NO BANCO DE DADOS INF LOGIN E SENHA
 
@@ -42,7 +40,7 @@ const Login = () => {
 
 
 
-        navigate("/");
+        navigate("/Cart");
        }
        //FIM BLOCO IF
       } catch (error) {}
@@ -53,7 +51,7 @@ const Login = () => {
   }
   return (
     <>
-      <Navbar />
+    
       <Header/>
 
 
