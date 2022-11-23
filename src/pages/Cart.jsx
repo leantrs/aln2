@@ -122,7 +122,7 @@ const Cart = () => {
   
   const [estado2, setEstado2] = useState(false);
   const [quantidade, setQuantidade] = useState(0);
-  const [count, setCount] = useState(1);
+ 
   
 
   
@@ -247,8 +247,7 @@ const Cart = () => {
   async function handleSignIn() {
       try {
        
-         setCount(0);
-         let soma = valor * count;
+         let soma = valor * quant;
 
         
         const itemx = {
@@ -260,7 +259,7 @@ const Cart = () => {
            obs: obs,
         };
          
-       // console.log(itemx)
+       console.log(itemx)
         
         const armaz = JSON.stringify(itemx);
         localStorage.setItem(itemx.id, armaz);
