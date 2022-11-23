@@ -247,6 +247,7 @@ const Cart = () => {
   async function handleSignIn() {
       try {
        
+         setCount(0);
          let soma = valor * count;
 
         
