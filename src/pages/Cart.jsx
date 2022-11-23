@@ -383,7 +383,7 @@ const Cart = () => {
              
               <input  
                className= "teste"
-              type="text"
+              type="number"
               id="quant"
               name="valor"
               placeholder="valor"
@@ -392,7 +392,7 @@ const Cart = () => {
               />
         <input 
                className= "teste"
-              type="text"             
+              type="number"             
               placeholder="quant"
               value={quant}
               onChange={(event) => setQuant(event.target.value)}
