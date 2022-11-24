@@ -188,9 +188,14 @@ const Cart = () => {
     let total = 0;
 
     recx.forEach((item) => {
-      valor = item.valor * item.quant;
-      total += valor;
-       
+      console.log(item);
+      if(Number(item.quant) > 1 ){
+        valor = Number(item.valor) * 1; 
+      }else{
+      valor = Number(item.valor) * Number(item.quant);
+      }
+      quantidade = quantidade + Number(item.quant); 
+      total += valor;       
     });
 
     //console.log(total);
