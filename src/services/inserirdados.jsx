@@ -21,9 +21,9 @@ async function inserirdados(estab,itens,valor,quant,obs) {
 
     let json = await response.json();
 
-   
+    console.log(json);
 
-    return json;
+     return json;
 
   } catch (error) {
 

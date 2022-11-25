@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import listaitens from '../services/listarProdutos';
 import listaestab from '../services/listarProdutosy'
 import inserirdados from "../services/inserirdados";
-
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -130,7 +130,7 @@ const Cart = () => {
  
 
   const userx = JSON.stringify(localStorage.getItem("pass"));
-
+  const navigate = useNavigate();
   
 
   useEffect(
@@ -292,6 +292,15 @@ const Cart = () => {
     }
   // }
 }
+async function handleSignIn4() {
+  try {
+    navigate("/View");
+   
+  } catch (error) {
+  //  console.log(titulo);
+  }
+// }
+}
   // async function handleSignIn1() {
   //   try {
   //           if (estado === true) {
@@ -413,6 +422,7 @@ const Cart = () => {
          
 
          <button className="btnd2" onClick={() => handleSignIn()}>INSERIR</button>    
+       
 
         <Bottom>
           <Info>
@@ -454,8 +464,8 @@ const Cart = () => {
     </Container>
         </div>
         <div className="boxc-2">
-        
-          <SummaryTitle>TOTAL</SummaryTitle>
+
+        <SummaryTitle>TOTAL</SummaryTitle>
           <SummaryItem>
             <SummaryItemText>Subtotal</SummaryItemText>
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
@@ -469,9 +479,15 @@ const Cart = () => {
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
           </SummaryItem>
          <button className="btnd2" onClick={handleSignIn3}> INSERIR BD</button> 
-         
+
+
+
+
+
+
          <ToastContainer />
         </div>
+        <button className="btnd2" onClick={() => handleSignIn4()}></button>  
     </div>
     
     </>

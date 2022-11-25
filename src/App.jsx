@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import { Provider } from "react-redux";
 import store from "./store";
 import Login from "./pages/Login";
+import View from "./pages/View";
 
 
 
@@ -18,8 +19,8 @@ const App = () => {
       <Routes>
          <Route path="/" element={<Login />} />
          <Route path="/Cart" element={<Cart />} />
-         {/* <Route path="/Details" element={<Details />} />     
-         <Route path="/Cart" element={<Cart />} />   
+         <Route path="/View" element={<View />} />     
+         {/*<Route path="/Cart" element={<Cart />} />   
          <Route path="/Login" element={<Login/>} />   
          <Route path="/Register" element={<Register/>} />    */}
       </Routes>
