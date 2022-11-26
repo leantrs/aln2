@@ -5,6 +5,8 @@ import '../css/view.css';
 import Header from '../components/header';
 import 'react-toastify/dist/ReactToastify.css';
 import listarCompras from "../services/listarCompras";
+import buscarProdutoImg from "../services/buscarProdutosImg";
+
 
 
 const SummaryItem = styled.div`
@@ -25,6 +27,7 @@ const View = () => {
  
 
   const [teste, setTeste] = useState(null);
+  const [vlrmedia,setVlrmedia] = useState(0);
  
  
   
@@ -45,6 +48,9 @@ const View = () => {
     setTeste(xrec);
     console.log(xrec);
 
+    const zrec = await buscarProdutoImg();
+    setVlrmedia(zrec[0].imagem);
+    console.log(zrec[0].imagem);
    
   }
 
@@ -55,7 +61,7 @@ const View = () => {
       <Header/>
       
     <div className="containerc">
-        
+     
         <div className="boxc-2">
         
          
@@ -65,7 +71,6 @@ const View = () => {
           <SummaryItem>
         
             <SummaryItemText>{item.estabelecimento}</SummaryItemText>
-            <SummaryItemText>{item.itens}</SummaryItemText>
             <SummaryItemText>{item.datual}</SummaryItemText>
             <SummaryItemPrice>R$ {item.vlr}</SummaryItemPrice>
             
@@ -74,8 +79,14 @@ const View = () => {
          ))}  
          
         </div>
+          
     </div>
-    
+    <SummaryItem>
+               
+      
+        <SummaryItemPrice>  media diaria - R$ {vlrmedia}</SummaryItemPrice>
+        
+      </SummaryItem>     
     </>
   )
 }
