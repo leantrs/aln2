@@ -19,7 +19,7 @@ const SummaryItem = styled.div`
 
 const SummaryItemText = styled.span``;
 
-const SummaryItemPrice = styled.span``;
+
 
 
 const View = () => {
