@@ -4,7 +4,8 @@
     justify-content: center;
     height: auto;
     flex-flow: wrap;
-    background-color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
 
@@ -18,25 +19,26 @@
     width: 80%;
     max-width: 500px;
     height: 50vh;
-    background-color: white;
+    background-color: #333;
   
 }
 .btnd{
-    padding: 2px;
+    padding: 4px;
     border-radius: 5px;
-    border: 0.5px solid #000;
-    background-color: #fff;
+    border: 0.5px solid #fff;
+    background-color: #333;
 
 }
 .btnd:hover{
-    background-color: red;
+    background-color: #333;
     color: #fff;
     cursor: pointer;
 }
 .btnd2{
     padding: 7px;
+    margin: 15px;
     border-radius: 5px;
-    border-left: 10px solid #000;
+    border-left: 10px solid #fff;
     color: #fff;
     background-color: #161a2b;
    
@@ -52,4 +54,6 @@
     width: 200px;
     margin: 15px;
     padding: 10px;
+    background-color: #333;
+    color: #fff;
 }

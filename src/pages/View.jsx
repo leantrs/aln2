@@ -69,10 +69,11 @@ const View = () => {
         {teste &&
           teste.map((item) =>  ( 
           <SummaryItem>
-        
-            <SummaryItemText>{item.estabelecimento}</SummaryItemText>
-            <SummaryItemText>{item.datual}</SummaryItemText>
-            <SummaryItemPrice>R$ {item.vlr}</SummaryItemPrice>
+               <SummaryItemText>{item.datual} | R$ {item.vlr} </SummaryItemText>
+               
+               <SummaryItemText>{item.estabelecimento}</SummaryItemText>
+          
+           
             
           </SummaryItem>       
          

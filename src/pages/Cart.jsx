@@ -16,7 +16,10 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Container = styled.div``;
+const Container = styled.div`
+background: #333;
+
+`;
 
 
 
@@ -25,10 +28,12 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
+ 
 `;
 
 const Info = styled.div`
   flex: 3;
+
 `;
 
 const Product = styled.div`
@@ -42,6 +47,7 @@ const Product = styled.div`
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+ 
 `;
 
 
@@ -50,6 +56,7 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 `;
 
 const ProductName = styled.span``;
@@ -81,7 +88,7 @@ const ProductPrice = styled.div`
 `;
 
 const Hr = styled.hr`
-  background-color: #eee;
+
   border: none;
   height: 1px;
 `;
@@ -358,10 +365,10 @@ async function handleSignIn4() {
       <>
       
       <Header/>
-      
+      <Container>
     <div className="containerc">
         <div className="boxc-1">
-        <Container>
+       
        
              <select
               className= "teste"
@@ -461,7 +468,7 @@ async function handleSignIn4() {
         </Bottom>
         
    
-    </Container>
+  
         </div>
         <div className="boxc-2">
 
@@ -479,17 +486,17 @@ async function handleSignIn4() {
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
           </SummaryItem>
          <button className="btnd2" onClick={handleSignIn3}> INSERIR BD</button> 
+         <button className="btnd2" onClick={() => handleSignIn4()}>VISUALIZAR</button>  
 
 
 
 
-
-
+        
          <ToastContainer />
         </div>
-        <button className="btnd2" onClick={() => handleSignIn4()}></button>  
+       
     </div>
-    
+    </Container>
     </>
   )
 }
