@@ -40,10 +40,7 @@ const Login = () => {
        //FIM BLOCO IF
       } catch (error) {}
    }
-  async function handleSignIn2() {
-    // eslint-disable-next-line
-    navigate("/Register");
-  }
+ 
   return (
     <>
     
