@@ -77,9 +77,9 @@ const Login = () => {
             
             <button className="btn" onClick={handleSignIn}>LOGIN</button>
             <ToastContainer />
-            <button className="btny" onClick={handleSignIn2}>
+            {/* <button className="btny" onClick={handleSignIn2}>
               Nao tem uma conta? Registre-se
-            </button>
+            </button> */}
             {/* <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link> 
 
             <Link onClick={handleSignIn2}>Nao tem uma conta? Registre-se</Link>
