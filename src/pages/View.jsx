@@ -81,12 +81,9 @@ const View = () => {
         </div>
           
     </div>
-    <SummaryItem>
-               
-      
-        <SummaryItemPrice>  media diaria - R$ {vlrmedia}</SummaryItemPrice>
+     <div className = "btnde"> Media diaria - R$ {vlrmedia}</div>
         
-      </SummaryItem>     
+    
     </>
   )
 }
