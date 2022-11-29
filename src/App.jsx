@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Login from "./pages/Login";
 import View from "./pages/View";
+import Viewtwo from "./pages/Viewtwo";
 
 
 
@@ -19,7 +20,8 @@ const App = () => {
       <Routes>
          <Route path="/" element={<Login />} />
          <Route path="/Cart" element={<Cart />} />
-         <Route path="/View" element={<View />} />     
+         <Route path="/View" element={<View />} />  
+         <Route path="/Viewtwo" element={<Viewtwo />} />        
          {/*<Route path="/Cart" element={<Cart />} />   
          <Route path="/Login" element={<Login/>} />   
          <Route path="/Register" element={<Register/>} />    */}

@@ -308,6 +308,15 @@ async function handleSignIn4() {
   }
 // }
 }
+async function handleSignIn5() {
+  try {
+    navigate("/Viewtwo");
+   
+  } catch (error) {
+  //  console.log(titulo);
+  }
+// }
+}
   // async function handleSignIn1() {
   //   try {
   //           if (estado === true) {
@@ -486,7 +495,8 @@ async function handleSignIn4() {
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
           </SummaryItem>
          <button className="btnd2" onClick={handleSignIn3}> INSERIR BD</button> 
-         <button className="btnd2" onClick={() => handleSignIn4()}>VISUALIZAR</button>  
+         <button className="btnd2" onClick={() => handleSignIn4()}>G ESTAB</button>  
+         <button className="btnd2" onClick={() => handleSignIn5()}>G ITENS</button>  
 
 
 
