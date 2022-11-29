@@ -14,6 +14,7 @@ async function buscarProdutoImg(rec) {
 
     let json = await response.json();
     
+     console.log(json);
 
     return json;
   } catch (error) {

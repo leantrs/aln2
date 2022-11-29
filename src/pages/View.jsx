@@ -28,6 +28,7 @@ const View = () => {
 
   const [teste, setTeste] = useState(null);
   const [vlrmedia,setVlrmedia] = useState(0);
+  const [total,setTotal] = useState(0);
  
  
   
@@ -50,7 +51,10 @@ const View = () => {
 
     const zrec = await buscarProdutoImg();
     setVlrmedia(zrec[0].imagem);
-    console.log(zrec[0].imagem);
+    setTotal(zrec[0].total);
+
+    console.log(zrec);
+    
    
   }
 
@@ -82,6 +86,7 @@ const View = () => {
         </div>
           
     </div>
+     <div className = "btnde"> Total de Gastos - R$ {total}</div>
      <div className = "btnde"> Media diaria - R$ {vlrmedia}</div>
         
     
