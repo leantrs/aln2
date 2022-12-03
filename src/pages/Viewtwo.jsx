@@ -1,8 +1,6 @@
-//import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import '../css/view.css';
-import Header from '../components/header';
 import 'react-toastify/dist/ReactToastify.css';
 import listarComprastwo from "../services/listarComprastwo";
 
@@ -20,16 +18,10 @@ const SummaryItemText = styled.span``;
 
 
 
-
 const Viewtwo = () => {
-
  
 
   const [teste, setTeste] = useState(null);
-
- 
- 
-  
 
   useEffect(
     () => {
@@ -54,9 +46,6 @@ const Viewtwo = () => {
   
   return (
       <>
-      
-      <Header/>
-      
     <div className="containerc">
      
         <div className="boxc-2">
@@ -68,7 +57,9 @@ const Viewtwo = () => {
           <SummaryItem>
                <SummaryItemText>{item.itens} </SummaryItemText>
                
-               <SummaryItemText> R$ {item.vlr} </SummaryItemText>
+               <SummaryItemText>{item.vlr} </SummaryItemText>
+
+               <SummaryItemText> {item.perc} % </SummaryItemText>
           
            
             

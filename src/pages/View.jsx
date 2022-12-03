@@ -2,7 +2,6 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import '../css/view.css';
-import Header from '../components/header';
 import 'react-toastify/dist/ReactToastify.css';
 import listarCompras from "../services/listarCompras";
 import buscarProdutoImg from "../services/buscarProdutosImg";
@@ -62,7 +61,7 @@ const View = () => {
   return (
       <>
       
-      <Header/>
+     
       
     <div className="containerc">
      
@@ -75,8 +74,7 @@ const View = () => {
           <SummaryItem>
                <SummaryItemText>{item.datual} | R$ {item.vlr} </SummaryItemText>
                
-               <SummaryItemText>{item.estabelecimento}</SummaryItemText>
-          
+               <SummaryItemText>{item.estabelecimento}</SummaryItemText>          
            
             
           </SummaryItem>       

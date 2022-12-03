@@ -2,19 +2,13 @@ import React from "react";
 import '../css/header.css';
 
 
-const Header = () => {
+const Header = (props) => {
 
 
     return(
          <header >
-             {/* <img className="imgc" src="https://alineleandro.ml/img/logo.png" alt="" />                */}
-             <h1>--</h1>
+             <h1>R$ {props.teste}</h1>
          </header>
-
-       
-        
-      
-
     )
     
 }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authServices from "../services/authServices";
 import '../css/Login.css';
-import Header from '../components/header';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
@@ -44,10 +43,7 @@ const Login = () => {
   return (
     <>
     
-      <Header/>
-
-
-
+      
       <div className="container">
         <div className="wrapper">
         <div className="title">
@@ -74,13 +70,7 @@ const Login = () => {
             
             <button className="btn" onClick={handleSignIn}>LOGIN</button>
             <ToastContainer />
-            {/* <button className="btny" onClick={handleSignIn2}>
-              Nao tem uma conta? Registre-se
-            </button> */}
-            {/* <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link> 
-
-            <Link onClick={handleSignIn2}>Nao tem uma conta? Registre-se</Link>
-            */}
+            
           </div>
           </div>
         </div>

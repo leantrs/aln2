@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
 background: #333;
-
+height: 100vh;
 `;
 
 
@@ -373,7 +373,7 @@ async function handleSignIn5() {
   return (
       <>
       
-      <Header/>
+      <Header teste ={soma}/>
       <Container>
     <div className="containerc">
         <div className="boxc-1">
