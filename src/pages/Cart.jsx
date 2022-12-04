@@ -1,4 +1,3 @@
-//import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import React, { useState, useEffect } from "react";
@@ -166,14 +165,12 @@ const Cart = () => {
     const xrec = await listaitens();
     setListaitem(xrec);
 
-   // console.log(xrec);
+   
 
 
     const xrecy = await listaestab();
     setListalocais(xrecy);
-    //console.log(xrecy);
-
-
+   
 
     setItt(rec);
     function checkar(k) {
@@ -181,9 +178,7 @@ const Cart = () => {
     }
 
 
-   // console.log(rec) 
-
-
+   
     const recx = rec.map((item) => {
       return JSON.parse(localStorage.getItem(item));
     });
@@ -205,15 +200,14 @@ const Cart = () => {
       total += valor;       
     });
 
-    //console.log(total);
+   
 
 
     setSoma(total.toFixed(2));
     setQuantidade(quantidade);
 
   
-  //  console.log(recx)
-
+  
     if (recx !== null) {
   
       console.log("entrou");
@@ -284,9 +278,9 @@ const Cart = () => {
   
        
       } catch (error) {
-      //  console.log(titulo);
+  
       }
-    // }
+  
   }
 
   async function handleSignIn3() {
@@ -295,74 +289,28 @@ const Cart = () => {
 
      
     } catch (error) {
-    //  console.log(titulo);
+  
     }
-  // }
+  
 }
 async function handleSignIn4() {
   try {
     navigate("/View");
    
   } catch (error) {
-  //  console.log(titulo);
+  
   }
-// }
+
 }
 async function handleSignIn5() {
   try {
     navigate("/Viewtwo");
    
   } catch (error) {
-  //  console.log(titulo);
+
   }
-// }
+
 }
-  // async function handleSignIn1() {
-  //   try {
-  //           if (estado === true) {
-  //       const email = await pegarEmail();
-
-  //       let response = await fetch("https://alineleandro.ml/Controller.php", {
-  //         method: "POST",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({
-  //           pass: "krn",
-  //           email: email,
-  //           items: teste,
-  //         }),
-  //       });
-
-  //       let json = await response.json();
-
-  //       let reca = json[0];
-
-  //       window.location.href =
-  //         "https://pagseguro.uol.com.br/v2/checkout/payment.html?code=" + reca;
-
-  //       itt.map((item) => {
-  //         localStorage.removeItem(item);
-  //         return item;
-  //       });
-  //     } else {
-  //       //toast.warn("Necessario efetuar login / Nao usuario Registre-se");
-  //    //   console.log("Necessario efetuar login / Nao usuario Registre-se")
-  //       navigate("/Login");
-     
-  //     }
-      
-      // let response = await fetch('https://graph.facebook.com/v15.0/17841402265662259?fields=business_discovery.username(cnovohamburgo){followers_count,media_count,media}&access_token=EAAGpPS1V6ZB0BAD4OiKbZAC9FDR3Qq9rAZC8AIuji4vWltLulyDiQocrQW18ftCsEnmI1dLDkGUB3F2UqkRFDJ47ZA4vjMil2ZCZCcC5gzKE4q8N0ePbYZArJhoZA0CiqEszGZBWw7K4PzXPht24PZAEv9svvZBUZBbhZC8BN60i8gqpjOkisVUdZAbBgZAYwsPflBystjS1PLhtk6MRLhWQggzeNCl')
-      // .then(response => response.json())
-      // .then();
-
-  //     // console.log(response.business_discovery.followers_count)
-  //   } catch (error) {
-  //  //   console.log("algo errado aqui")
-  //   }
-    
-  // }
   async function handleSignIn1(item) {
 
     localStorage.removeItem(item);
@@ -376,7 +324,7 @@ async function handleSignIn5() {
       <Header teste ={soma}/>
       <Container>
     <div className="containerc">
-        <div className="boxc-1">
+        <div className="boxc-2">
        
        
              <select
@@ -389,9 +337,6 @@ async function handleSignIn5() {
               >
                  {listalocais &&
               listalocais.map((item) => (<option>{item.estabelecimento}</option>))}
-                {/* <option value={estab}></option>
-                <option value={estab}>Zanela</option>
-                <option value={estab}>Hoffmann</option> */}
                 </select>
 
                 <select
@@ -405,10 +350,7 @@ async function handleSignIn5() {
               >
                  {listaitem &&
               listaitem.map((item) => (<option>{item.testte}</option>))}
-                {/* <option></option>
-                <option>Refrigerante</option>
-                <option>Arroz</option>
-                <option>Feijao</option> */}
+                
                 </select>
              
               <input  
@@ -446,7 +388,7 @@ async function handleSignIn5() {
               teste.map((item) => (
                 <Product key={item.id}>
                   <ProductDetail>
-                    {/* <Image src={item.img} /> */}
+
                     <Details>
                       <ProductName>
                         <b>Produto:</b> {item.estab}
@@ -460,8 +402,6 @@ async function handleSignIn5() {
                       <ProductId>
                         <b>Obs:</b> {item.obs}
                       </ProductId>
-                      {/* <ProductColor color="green" /> */}
-                      {/* <ProductSize>quant: {item.total}</ProductSize> */}
                     </Details>
                   </ProductDetail>
                   <PriceDetail>

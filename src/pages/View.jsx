@@ -1,4 +1,3 @@
-//import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import '../css/view.css';
@@ -17,7 +16,6 @@ const SummaryItem = styled.div`
 `;
 
 const SummaryItemText = styled.span``;
-
 
 
 
@@ -46,15 +44,12 @@ const View = () => {
     
     const xrec = await listarCompras();
     setTeste(xrec);
-    console.log(xrec);
+   
 
     const zrec = await buscarProdutoImg();
     setVlrmedia(zrec[0].imagem);
     setTotal(zrec[0].total);
 
-    console.log(zrec);
-    
-   
   }
 
   
@@ -71,16 +66,18 @@ const View = () => {
      
         {teste &&
           teste.map((item) =>  ( 
+            
           <SummaryItem>
                <SummaryItemText>{item.datual} | R$ {item.vlr} </SummaryItemText>
                
                <SummaryItemText>{item.estabelecimento}</SummaryItemText>          
-           
+               
             
           </SummaryItem>       
+          
          
          ))}  
-         
+        
         </div>
           
     </div>
