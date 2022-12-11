@@ -48,6 +48,7 @@ const Viewthree = () => {
               <tr>
                  
                   <th>{item.vlr}</th>
+                  <th>{item.quant}</th>
                   <th>{item.obs}</th>
               </tr>
             </table>
