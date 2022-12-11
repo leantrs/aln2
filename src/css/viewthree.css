@@ -1,0 +1,71 @@
+.containerc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    flex-flow: wrap;
+    background-color: #333;
+}
+
+
+
+.containerc .boxc-2{
+    flex: 1;
+    border: 0.5px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    background-color: #333;
+  
+}
+.btnd{
+    padding: 2px;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    background-color: #fff;
+
+}
+.btnd:hover{
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+.btnd2{
+    padding: 7px;
+    border-radius: 5px;
+    border-left: 10px solid #000;
+    color: #fff;
+    background-color: #161a2b;
+   
+
+}
+.btnd2:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.teste{
+    width: 200px;
+    margin: 15px;
+    padding: 10px;
+}
+.bnc{
+    margin: 15px;
+    border-radius: 5px solid #000;
+}
+.btnde{
+    padding: 10px;
+    margin-left: 20px;
+    background-color: #333;
+    color: #fff;
+
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    width: 320px;
+  }

@@ -1,59 +1,54 @@
 import React, { useState, useEffect } from "react";
-import '../css/view.css';
+import '../css/viewthree.css';
 import 'react-toastify/dist/ReactToastify.css';
-import listarComprastwo from "../services/listarComprastwo";
-import { useNavigate } from "react-router-dom";
+import listarComprasthree from "../services/listarComprasthree";
 
 
 
-const Viewtwo = () => {
-  const navigate = useNavigate();
+
+const Viewthree = () => {
+
  
 
   const [teste, setTeste] = useState(null);
-
+  
   useEffect(
     () => {
+
+      const url1 = window.location.href;
+      const res1 = url1.split("?");
   
-      krn();
+      krn(res1[1]);
     }, // eslint-disable-next-line
     []
   );
 
 
 
-  async function krn() {
+  async function krn(rec) {
     
-    const xrec = await listarComprastwo('');
+    const xrec = await listarComprasthree(rec);
     setTeste(xrec);
-
-
-  
-   
+    
   }
-async function handleSignIn(rec){
 
-  navigate("/Viewthree?"+rec);
-
-}
   
   return (
       <>
     <div className="containerc">
      
         <div className="boxc-2">
-        
-         
-     
+  
         {teste &&
           teste.map((item) =>  ( 
 
-
+  
             <table >
+            {item.estabelecimento} - {item.itens} - {item.datual}        
               <tr>
-                  <th onClick={() => handleSignIn(item.itens)}>{item.itens}</th>
+                 
                   <th>{item.vlr}</th>
-                  <th>{item.perc} % </th>
+                  <th>{item.obs}</th>
               </tr>
             </table>
          
@@ -69,4 +64,4 @@ async function handleSignIn(rec){
   )
 }
 
-export default Viewtwo
+export default Viewthree

@@ -7,6 +7,8 @@ import store from "./store";
 import Login from "./pages/Login";
 import View from "./pages/View";
 import Viewtwo from "./pages/Viewtwo";
+import Viewthree from "./pages/Viewthree";
+
 
 
 
@@ -22,6 +24,7 @@ const App = () => {
          <Route path="/Cart" element={<Cart />} />
          <Route path="/View" element={<View />} />  
          <Route path="/Viewtwo" element={<Viewtwo />} />        
+         <Route path="/Viewthree" element={<Viewthree />} />        
          {/*<Route path="/Cart" element={<Cart />} />   
          <Route path="/Login" element={<Login/>} />   
          <Route path="/Register" element={<Register/>} />    */}
