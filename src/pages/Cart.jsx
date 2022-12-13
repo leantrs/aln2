@@ -210,7 +210,7 @@ const Cart = () => {
   
     if (recx !== null) {
   
-      console.log("entrou");
+   //   console.log("entrou");
       setTeste(Array.from(recx));
     }
     setEstado2(true);
@@ -265,7 +265,7 @@ const Cart = () => {
            obs: obs,
         };
          
-       console.log(itemx)
+    //   console.log(itemx)
         
         const armaz = JSON.stringify(itemx);
         localStorage.setItem(itemx.id, armaz);
@@ -305,6 +305,16 @@ async function handleSignIn4() {
 async function handleSignIn5() {
   try {
     navigate("/Viewtwo");
+   
+  } catch (error) {
+
+  }
+
+}
+
+async function handleSignIn6() {
+  try {
+    navigate("/Viewfour");
    
   } catch (error) {
 
@@ -435,8 +445,9 @@ async function handleSignIn5() {
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
           </SummaryItem>
          <button className="btnd2" onClick={handleSignIn3}> INSERIR BD</button> 
-         <button className="btnd2" onClick={() => handleSignIn4()}>G ESTAB</button>  
-         <button className="btnd2" onClick={() => handleSignIn5()}>G ITENS</button>  
+         <button className="btnd2" onClick={() => handleSignIn4()}>LOCCAIS</button>  
+         <button className="btnd2" onClick={() => handleSignIn5()}>ITENS</button>  
+         <button className="btnd2" onClick={() => handleSignIn6()}>PROGRESS</button>  
 
 
 

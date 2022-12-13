@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import '../css/view.css';
 import 'react-toastify/dist/ReactToastify.css';
-import listarComprastwo from "../services/listarComprastwo";
-import { useNavigate } from "react-router-dom";
 import Progressbar from '../components/Progressbar';
 import '../css/style.css';
+import listarComprasfour from "../services/listarComprasfour";
 
 
 
-const Viewtwo = () => {
-  const navigate = useNavigate();
+const Viewfour = () => {
+
  
 
   const [teste, setTeste] = useState(null);
@@ -26,19 +25,14 @@ const Viewtwo = () => {
 
   async function krn() {
     
-    const xrec = await listarComprastwo('');
+    const xrec = await listarComprasfour();
     setTeste(xrec);
 
 
   
    
   }
-async function handleSignIn(rec){
 
-  navigate("/Viewthree?"+rec);
-
-}
-  
   return (
       <>
     <div className="containerc">
@@ -53,7 +47,7 @@ async function handleSignIn(rec){
 
             <table >
               <tr>
-                  <th onClick={() => handleSignIn(item.itens)}>{item.itens}</th>
+                  <th >{item.estabelecimento}</th>
                   <th>{item.vlr}</th>
                   <Progressbar perc={item.perc}/>
                   {/* <th>{item.perc} % </th> */}
@@ -72,4 +66,4 @@ async function handleSignIn(rec){
   )
 }
 
-export default Viewtwo
+export default Viewfour

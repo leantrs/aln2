@@ -6,6 +6,7 @@ import buscarProdutoImg from "../services/buscarProdutosImg";
 
 
 
+
 const View = () => {
 
  
@@ -75,11 +76,13 @@ const View = () => {
                   
               </tr>
             </table>
+            
     </div>
    
         
     
     </>
+    
   )
 }
 

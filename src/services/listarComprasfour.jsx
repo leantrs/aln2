@@ -1,4 +1,4 @@
-async function buscarProdutoImg(rec) {
+async function listarComprasfour() {
   try {
     let response = await fetch("https://alineleandro.com.br/Controller.php", {
       method: "POST",
@@ -7,19 +7,19 @@ async function buscarProdutoImg(rec) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        pass: "produtosImg",
-        fornc: rec,
+        pass: "produtosTamfour",
+        
       }),
     });
 
     let json = await response.json();
-    
-    // console.log(json);
+
+
 
     return json;
   } catch (error) {
-    //console.log("banco de dados desconectado");
+   console.log("banco de dados desconectado");
   }
 }
 
-export default buscarProdutoImg;
+export default listarComprasfour;

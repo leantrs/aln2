@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import View from "./pages/View";
 import Viewtwo from "./pages/Viewtwo";
 import Viewthree from "./pages/Viewthree";
+import Viewfour from "./pages/Viewfour";
 
 
 
@@ -24,7 +25,8 @@ const App = () => {
          <Route path="/Cart" element={<Cart />} />
          <Route path="/View" element={<View />} />  
          <Route path="/Viewtwo" element={<Viewtwo />} />        
-         <Route path="/Viewthree" element={<Viewthree />} />        
+         <Route path="/Viewthree" element={<Viewthree />} />     
+         <Route path="/Viewfour" element={<Viewfour />} />        
          {/*<Route path="/Cart" element={<Cart />} />   
          <Route path="/Login" element={<Login/>} />   
          <Route path="/Register" element={<Register/>} />    */}
