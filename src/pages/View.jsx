@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../css/view.css';
 import 'react-toastify/dist/ReactToastify.css';
 import listarCompras from "../services/listarCompras";
-import buscarProdutoImg from "../services/buscarProdutosImg";
+// import buscarProdutoImg from "../services/buscarProdutosImg";
 
 
 
@@ -12,8 +12,8 @@ const View = () => {
  
 
   const [teste, setTeste] = useState(null);
-  const [vlrmedia,setVlrmedia] = useState(0);
-  const [total,setTotal] = useState(0);
+  // const [vlrmedia,setVlrmedia] = useState(0);
+  // const [total,setTotal] = useState(0);
  
  
   
@@ -34,9 +34,9 @@ const View = () => {
     setTeste(xrec);
    
 
-    const zrec = await buscarProdutoImg();
-    setVlrmedia(zrec[0].imagem);
-    setTotal(zrec[0].total);
+    // const zrec = await buscarProdutoImg();
+    // setVlrmedia(zrec[0].imagem);
+    // setTotal(zrec[0].total);
 
   }
 
@@ -69,13 +69,13 @@ const View = () => {
          ))}  
         
         </div>
-        <table >
+        {/* <table >
               <tr>
                   <th>Total Gastos: {total}</th>
                   <th>Media diaria:  {vlrmedia}</th>
                   
               </tr>
-            </table>
+            </table> */}
             
     </div>
    

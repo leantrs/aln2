@@ -15,7 +15,7 @@ export default function Progressbar(props) {
 			  <div style={{
 				  height: "100%",
 				  width: `${props.perc}%`,
-				  backgroundColor: "#32CD32",
+				  backgroundColor: "#7CFC00",
 				  transition:"width 0.5s"
 			  }}></div>
 			  <span className="progressPercent">{ props.perc }%</span>

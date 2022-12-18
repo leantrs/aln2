@@ -94,9 +94,9 @@ const Hr = styled.hr`
 
 
 
-const SummaryTitle = styled.h1`
-  font-weight: 200;
-`;
+// const SummaryTitle = styled.h1`
+//   font-weight: 200;
+// `;
 
 const SummaryItem = styled.div`
   margin: 30px 0px;
@@ -431,11 +431,11 @@ async function handleSignIn6() {
         </div>
         <div className="boxc-2">
 
-        <SummaryTitle>TOTAL</SummaryTitle>
-          <SummaryItem>
+        {/* <SummaryTitle>TOTAL</SummaryTitle> */}
+          {/* <SummaryItem>
             <SummaryItemText>Subtotal</SummaryItemText>
             <SummaryItemPrice>R$ {soma}</SummaryItemPrice>
-          </SummaryItem>
+          </SummaryItem> */}
           <SummaryItem>
             <SummaryItemText>Quantidade</SummaryItemText>
             <SummaryItemPrice>{quantidade}</SummaryItemPrice>

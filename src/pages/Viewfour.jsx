@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Progressbar from '../components/Progressbar';
 import '../css/style.css';
 import listarComprasfour from "../services/listarComprasfour";
+import buscarProdutoImg from "../services/buscarProdutosImg";
 
 
 
@@ -12,6 +13,8 @@ const Viewfour = () => {
  
 
   const [teste, setTeste] = useState(null);
+  const [vlrmedia,setVlrmedia] = useState(0);
+  const [total,setTotal] = useState(0);
 
   useEffect(
     () => {
@@ -28,9 +31,10 @@ const Viewfour = () => {
     const xrec = await listarComprasfour();
     setTeste(xrec);
 
+    const zrec = await buscarProdutoImg();
+    setVlrmedia(zrec[0].imagem);
+    setTotal(zrec[0].total);
 
-  
-   
   }
 
   return (
@@ -55,8 +59,17 @@ const Viewfour = () => {
             </table>
          
          ))}  
+
+           <table >
+              <tr>
+                  <th id="aq">Total Gastos: {total}</th>
+                  <th id="aqx">Media diaria:  {vlrmedia}</th>
+                  
+              </tr>
+            </table>
          
         </div>
+        
           
     </div>
 
