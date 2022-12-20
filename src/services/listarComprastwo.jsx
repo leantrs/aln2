@@ -1,4 +1,7 @@
 async function listarComprastwo(rec) {
+  
+
+ 
   try {
     let response = await fetch("https://alineleandro.com.br/Controller.php", {
       method: "POST",
@@ -18,6 +21,7 @@ async function listarComprastwo(rec) {
   } catch (error) {
    console.log("banco de dados desconectado");
   }
+
 }
 
 export default listarComprastwo;

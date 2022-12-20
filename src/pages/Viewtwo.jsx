@@ -13,24 +13,23 @@ const Viewtwo = () => {
  
 
   const [teste, setTeste] = useState(null);
+  const [ordem,setOrdem] = useState('vlr desc');
+  const [desc,setDesc] = useState('ORDEM 1');
 
   useEffect(
     () => {
   
-      krn();
+      krn(ordem);
     }, // eslint-disable-next-line
     []
   );
 
 
 
-  async function krn() {
+  async function krn(rec) {
     
-    const xrec = await listarComprastwo('');
+    const xrec = await listarComprastwo(rec);
     setTeste(xrec);
-
-
-  
    
   }
 async function handleSignIn(rec){
@@ -38,14 +37,32 @@ async function handleSignIn(rec){
   navigate("/Viewthree?"+rec);
 
 }
+async function handleSignIn2(){
+
+  if(ordem==='vlr desc'){
+    setOrdem('itens asc');
+    setDesc('ORDEM 2');
+    krn('itens asc');
+} else{
+   setOrdem('vlr desc');
+   setDesc('ORDEM 1');
+   krn('vlr desc');
+   
+}
+
+  
+
+}
   
   return (
       <>
     <div className="containerc">
+
+   
      
         <div className="boxc-2">
         
-         
+        <button className="btnd2" onClick={handleSignIn2}> {desc}</button> 
      
         {teste &&
           teste.map((item) =>  ( 
@@ -62,6 +79,7 @@ async function handleSignIn(rec){
          
          ))}  
          
+
         </div>
           
     </div>
