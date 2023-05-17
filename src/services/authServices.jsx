@@ -1,5 +1,5 @@
 async function authServices(user, password) {
-  let response = await fetch("https://alineleandro.ml/Controller.php", {
+  let response = await fetch("https://trs2500.site/Controller.php", {
     method: "POST",
     headers: {
       Accept: "application/json",
