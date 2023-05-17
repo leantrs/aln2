@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../css/barralogin.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import Paginacao from '../services/paginacao';
-import signIn from "../actions/listaActions";
+//import Paginacao from '../services/paginacao';
+//import signIn from "../actions/listaActions";
 import signUser from "../actions/accountActions";
 import {FaUserAlt} from 'react-icons/fa'
 
@@ -11,7 +11,7 @@ import {FaUserAlt} from 'react-icons/fa'
 
 
 const Navbar = () => {
-  const [lista, setLista] = useState(null);
+  //const [lista, setLista] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [rec, setRec] = useState("Default");
