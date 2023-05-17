@@ -120,7 +120,7 @@ async function buscarR(jul) {
   // } else {
     try {
      
-      let soma = valor * count;
+      //let soma = valor * count;
 
       const itemx = {
         id: id,
@@ -129,7 +129,7 @@ async function buscarR(jul) {
         valor: soma,
         valororiginal: Number(valor),
         img: listaB[0].imagem,
-        total: count,
+        //total: count,
         tamanho,
         ref: referencia,
       };
