@@ -126,7 +126,7 @@ async function buscarR(jul) {
         id: id,
         titulo: titulo,
         fornecedor: fornecedor,
-        valor: soma,
+        //valor: soma,
         valororiginal: Number(valor),
         img: listaB[0].imagem,
         //total: count,
