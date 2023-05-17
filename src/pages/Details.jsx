@@ -29,8 +29,8 @@ const Details = () => {
   const[fornecedor,setFornecedor] = useState(0);
   const[id,setId] = useState(0);
 
-  const [itemsf, setItemsf] = useState("");
-  const [count, setCount] = useState(1);
+  //const [itemsf, setItemsf] = useState("");
+  //const [count, setCount] = useState(1);
   const navigate = useNavigate();
 
 

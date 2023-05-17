@@ -15,7 +15,7 @@ const Login = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-   const dispatch = useDispatch();
+   //const dispatch = useDispatch();
 
 
    const fail = (rec) =>  toast.error("Email ou Senha nao conferem");
@@ -34,9 +34,9 @@ const Login = () => {
         await localStorage.removeItem("pass");
       } else {
         // SE EXISTIR CRIA UM OBJETO DE USUARIO
-        const objUsuario = {
-          user: rec,
-        };
+        //const objUsuario = {
+         // user: rec,
+        //};
 
         localStorage.setItem("pass", rec);
 

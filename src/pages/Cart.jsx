@@ -132,7 +132,7 @@ const Cart = () => {
 
   const userx = JSON.stringify(localStorage.getItem("pass"));
  
-  const notify = () => toast.warn("Direcionado ao PagSeguro");
+  //const notify = () => toast.warn("Direcionado ao PagSeguro");
   
 
   useEffect(
