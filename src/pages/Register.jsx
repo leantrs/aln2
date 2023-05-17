@@ -101,7 +101,7 @@ const Register = () => {
     //console.log('aqui')
 
     try {
-      let response = await fetch("http://trs2500.site/Controller.php", {
+      let response = await fetch("https://trs2500.site/Controller.php", {
         method: "POST",
         headers: {
           Accept: "application/json",
